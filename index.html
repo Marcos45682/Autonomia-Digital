@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Autonomia Digital para Todos</title>
+  <meta name="description" content="Um assistente inteligente que faz a tarefa por você, por voz ou texto. Tecnologia que inclui.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="mic" viewBox="0 0 120 120">
+      <circle cx="60" cy="60" r="56" fill="#5aa4f2"/>
+      <rect x="48" y="26" width="24" height="42" rx="12" fill="#fff"/>
+      <path d="M36 58c0 14 10 24 24 24s24-10 24-24" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+      <path d="M60 82v12M48 94h24" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+    </symbol>
+  </svg>
+
+  <header class="topo">
+    <a href="#inicio" class="logo">Guia+</a>
+    <nav aria-label="Principal">
+      <a href="#problema">O problema</a>
+      <a href="#solucao">A solução</a>
+      <a href="#empresas">Para empresas</a>
+      <a href="#proposito">Propósito</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="#contato" class="botao pequeno">Quero saber mais</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero azul" id="inicio">
+      <div class="container hero-grade">
+        <div>
+          <h1>Usar o celular sem medo e sem pedir ajuda.</h1>
+          <p class="subtitulo">Um assistente que entende o que você quer e faz a tarefa por você, por voz ou texto, dentro dos apps de banco, saúde e compras.</p>
+          <div class="barra-azul"></div>
+          <div class="acoes">
+            <a class="botao" href="#solucao">Ver como funciona</a>
+            <a class="botao contorno" href="#empresas">Sou uma empresa</a>
+          </div>
+        </div>
+
+        <div class="celular" aria-label="Exemplo de conversa com o assistente">
+          <div class="celular-topo">
+            <svg class="mic-pequeno"><use href="#mic"/></svg>
+            <span>Assistente</span>
+          </div>
+          <div class="conversa" id="conversa">
+            <p class="msg voce">Quero transferir R$100 para o CPF 123.456.789-10</p>
+            <p class="msg assistente">Entendi. Vou abrir a transferência para você.</p>
+            <p class="msg assistente">Valor e CPF preenchidos. Confirma o envio?</p>
+            <p class="msg voce">Confirmo</p>
+            <p class="msg assistente pronto">Tarefa executada automaticamente.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao" id="problema">
+      <div class="container">
+        <h2>A tecnologia avança, mas deixa muita gente para trás</h2>
+        <p class="lead">Quase todo mundo usa aplicativos várias vezes ao dia. Só que, para muita gente, cada tela nova é um obstáculo.</p>
+
+        <div class="grade-3">
+          <article class="cartao azul">
+            <p class="numero"><span class="contar" data-alvo="93.8" data-casas="1">93,8</span>%</p>
+            <p>usam apps várias vezes ao dia</p>
+          </article>
+          <article class="cartao azul">
+            <p class="numero"><span class="contar" data-alvo="81.3" data-casas="1">81,3</span>%</p>
+            <p>já desistiram de uma tarefa importante</p>
+          </article>
+          <article class="cartao azul">
+            <p class="numero"><span class="contar" data-alvo="70.8" data-casas="1">70,8</span>%</p>
+            <p>não encontram o que procuram</p>
+          </article>
+        </div>
+
+        <div class="historia">
+          <div class="historia-texto">
+            <h3>Maria Aparecida, 72 anos</h3>
+            <p>Ela quer resolver as coisas sozinha, mas sente que é uma criança que não sabe fazer nada. Tem medo de cair em golpes e, por isso, prefere nem tentar.</p>
+            <p>Quando a tecnologia exige que você adivinhe o caminho, quem perde é a autonomia de quem usa.</p>
+          </div>
+          <div class="historia-dado">
+            <p class="numero grande"><span class="contar" data-alvo="83.3" data-casas="1">83,3</span>%</p>
+            <p>dos 48 entrevistados se sentem perdidos ao navegar</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao" id="alternativas">
+      <div class="container">
+        <h2>Como as pessoas se viram hoje</h2>
+        <p class="lead">Quem não se sente seguro no celular costuma recorrer a soluções que não resolvem de verdade.</p>
+        <div class="grade-2">
+          <article class="cartao cinza">
+            <h3>Hoje</h3>
+            <ul>
+              <li>Pedir ajuda a algum parente, que nem sempre está por perto</li>
+              <li>Assistir a tutoriais de vídeo no YouTube e tentar repetir cada passo</li>
+              <li>Desistir da tarefa, como já fizeram 81,3% dos entrevistados</li>
+            </ul>
+          </article>
+          <article class="cartao azul borda-laranja">
+            <h3>Com o assistente</h3>
+            <ul>
+              <li>A pessoa fala ou digita o que deseja, no momento em que precisa</li>
+              <li>O assistente faz a tarefa dentro do app ou site</li>
+              <li>Ninguém precisa interromper a vida de outra pessoa para pagar uma conta</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao azul" id="solucao">
+      <div class="container">
+        <h2>Um botão. Você pede, ele faz.</h2>
+        <p class="lead claro">Sem menus, sem botões escondidos, sem confusão. É como uma Siri para bancos, saúde e e-commerce.</p>
+
+        <ol class="passos-como">
+          <li>
+            <h3>Você pede</h3>
+            <p>Fale ou escreva do seu jeito, como pediria a uma pessoa.</p>
+          </li>
+          <li>
+            <h3>Ele entende</h3>
+            <p>O assistente encontra o caminho certo dentro do aplicativo.</p>
+          </li>
+          <li>
+            <h3>A tarefa é feita</h3>
+            <p>Os passos são executados automaticamente, e você confirma.</p>
+          </li>
+        </ol>
+
+        <div class="demo" id="demo">
+          <p class="demo-titulo">Experimente você mesmo</p>
+          <div class="abas" role="tablist" aria-label="Exemplos">
+            <button role="tab" class="aba ativa" data-i="0" aria-selected="true">Banco</button>
+            <button role="tab" class="aba" data-i="1" aria-selected="false">Saúde</button>
+            <button role="tab" class="aba" data-i="2" aria-selected="false">Compras</button>
+          </div>
+
+          <form class="demo-form" id="demoForm">
+            <label for="comando" class="so-leitor">Comando para o assistente</label>
+            <input id="comando" type="text" autocomplete="off">
+            <button type="button" class="mic" id="micBtn" aria-label="Falar o comando"><svg><use href="#mic"/></svg></button>
+            <button type="submit" class="botao">Enviar</button>
+          </form>
+
+          <ol class="passos" id="passos" aria-live="polite"></ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao cinza-claro" id="diferenciais">
+      <div class="container">
+        <h2>O que torna o assistente diferente</h2>
+        <p class="lead">Permitir que a pessoa realize tarefas completas em aplicativos e sites apenas falando ou digitando o que deseja, sem precisar navegar por menus ou saber onde estão os botões.</p>
+        <div class="grade-3">
+          <article class="cartao azul">
+            <h3>Faz, não só explica</h3>
+            <p>Um tutorial ensina o caminho e deixa você sozinho no resto. O assistente percorre o caminho por você.</p>
+          </article>
+          <article class="cartao azul">
+            <h3>Aprende com quem usa</h3>
+            <p>Construímos uma base de dados própria sobre padrões de navegação e dificuldades dos usuários, que melhora o assistente continuamente.</p>
+          </article>
+          <article class="cartao azul">
+            <h3>Voz ou texto</h3>
+            <p>Cada um escolhe o jeito mais confortável, inclusive quem tem dificuldade em enxergar ou dificuldade motora.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao" id="para-quem">
+      <div class="container">
+        <h2>Autonomia para quem usa. Resultado para quem oferece.</h2>
+        <div class="grade-2">
+          <article class="cartao azul borda-azul">
+            <h3>Para quem usa</h3>
+            <ul>
+              <li>Faz as coisas sozinho, sem depender de filhos, netos ou vizinhos</li>
+              <li>Menos medo de errar e de cair em golpes</li>
+              <li>Ajuda também quem tem dificuldade em enxergar, limitações motoras, sensoriais ou cognitivas</li>
+            </ul>
+          </article>
+          <article class="cartao azul borda-laranja">
+            <h3>Para empresas</h3>
+            <ul>
+              <li>Menos clientes perdidos por não saberem usar o serviço</li>
+              <li>Menos suporte técnico caro para problemas simples</li>
+              <li>Acesso a um público que cresce e tem poder de compra</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao cinza-claro" id="empresas">
+      <div class="container">
+        <h2>Como a sua empresa entra nessa</h2>
+        <p class="lead">Você contrata o assistente, ele passa a atender seus clientes dentro do seu app e o suporte para de apagar incêndio.</p>
+
+        <div class="fluxo">
+          <div class="cartao azul fluxo-item">
+            <svg class="icone" viewBox="0 0 24 24"><path d="M3 9.5 12 4l9 5.5M5 10v8M9 10v8M15 10v8M19 10v8M3 20h18" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Empresa</span>
+          </div>
+          <span class="seta" aria-hidden="true">→</span>
+          <div class="cartao azul fluxo-item">
+            <svg class="icone" viewBox="0 0 24 24"><path d="M5 11a8 8 0 0 1 8 8M5 5.5A13.5 13.5 0 0 1 18.5 19" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="6" cy="18" r="1.6" fill="currentColor"/></svg>
+            <span>Assinatura</span>
+          </div>
+          <span class="seta" aria-hidden="true">→</span>
+          <div class="cartao azul fluxo-item">
+            <svg class="icone" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M4 21c0-4.5 3.6-7 8-7s8 2.5 8 7z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+            <span>Cliente final</span>
+          </div>
+        </div>
+
+        <ul class="modelo-lista">
+          <li><strong>Assinatura mensal</strong> por empresa, com planos de acordo com a quantidade de usuários atendidos</li>
+          <li><strong>Licenciamento</strong> da tecnologia para grandes empresas</li>
+          <li><strong>Implantação e integração</strong> do assistente com os sistemas da empresa</li>
+        </ul>
+
+        <p class="frase">Quanto mais empresas contratam, mais inteligente o assistente fica.</p>
+        <a class="botao escuro" href="#contato">Quero conversar sobre isso</a>
+      </div>
+    </section>
+
+    <section class="secao grade-azul azul" id="proposito">
+      <div class="container">
+        <h2>Nosso propósito e nossa visão de mercado</h2>
+        <div class="grade-3">
+          <article class="papel">
+            <h3>Por que esse problema?</h3>
+            <p>Porque ele só tende a crescer conforme a tecnologia avança. Queremos ajudar idosos e pessoas com deficiências visuais ou cognitivas que não conseguem entender o que um programa quer fazer ou o que está pedindo.</p>
+          </article>
+          <article class="papel">
+            <h3>Onde vamos atuar?</h3>
+            <p>Em mercados voltados ao comércio, como aplicativos de banco, para dar acessibilidade plena a quem tem limitações motoras, sensoriais ou cognitivas. E também em apps do dia a dia, como WhatsApp e Google.</p>
+          </article>
+          <article class="papel amarelo">
+            <h3>O que esperamos?</h3>
+            <p>Uma operação financeira sustentável e que gere lucro, com valor para idosos, para o público com deficiência e para investidores que buscam retorno de capital.</p>
+            <p>Nossa visão é escalar o número de soluções para as pessoas, e o lucro vem como consequência.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao" id="validacao">
+      <div class="container">
+        <h2>Não é palpite. Perguntamos para quem vive isso.</h2>
+        <div class="grade-2 alinhado">
+          <div>
+            <p class="numero grande escuro-num"><span class="contar" data-alvo="48" data-casas="0">48</span></p>
+            <p class="lead">pessoas responderam nossa pesquisa, e o público 50+ cresce no Brasil e no mundo. Entre os idosos, <strong>37,5%</strong> têm renda acima de 10 salários mínimos.</p>
+            <p>Bancos, planos de saúde, e-commerces e serviços públicos são os primeiros que podem se beneficiar.</p>
+          </div>
+          <div class="cartao azul">
+            <div class="barras">
+              <div class="barra" data-valor="83.3">
+                <p><strong class="laranja">83,3%</strong> se sentem perdidos ao navegar</p>
+                <div class="trilho"><span></span></div>
+              </div>
+              <div class="barra" data-valor="47.9">
+                <p><strong class="laranja">47,9%</strong> pedem menos passos</p>
+                <div class="trilho"><span></span></div>
+              </div>
+              <div class="barra" data-valor="45.8">
+                <p><strong class="laranja">45,8%</strong> querem tutoriais simples</p>
+                <div class="trilho"><span></span></div>
+              </div>
+              <div class="barra" data-valor="27.1">
+                <p><strong class="laranja">27,1%</strong> querem botão de ajuda visível</p>
+                <div class="trilho"><span></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="momento">
+          <div>
+            <h3>Onde estamos agora</h3>
+            <p><strong>Concluído:</strong> validação com 48 usuários finais, persona, mapa da empatia, árvore do problema e visão de mercado.</p>
+          </div>
+          <div>
+            <p class="espaco-titulo"><strong>Em andamento:</strong> validação da solução com donos de empresas, para entender a dor do suporte técnico caro e da perda de clientes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao cinza-claro" id="faq">
+      <div class="container estreito">
+        <h2>Dúvidas frequentes</h2>
+        <details>
+          <summary>O assistente já está disponível?</summary>
+          <p>Ainda estamos validando a solução com donos de empresas. Por isso queremos ouvir você: sua opinião define o que vamos construir primeiro.</p>
+        </details>
+        <details>
+          <summary>Para quem o assistente foi pensado?</summary>
+          <p>Para idosos e para pessoas com deficiências visuais, motoras, sensoriais ou cognitivas, e para as empresas que querem atendê-los melhor.</p>
+        </details>
+        <details>
+          <summary>Preciso trocar o app que já uso?</summary>
+          <p>Não. A ideia é o assistente funcionar dentro dos apps que as pessoas já usam, com um botão flutuante sempre à mão.</p>
+        </details>
+        <details>
+          <summary>Como minha empresa pode participar?</summary>
+          <p>Preencha o formulário abaixo escolhendo a opção "Empresa". Vamos conversar sobre a dor do seu suporte e dos clientes que se perdem no caminho.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="fecho azul" id="contato">
+      <div class="container estreito">
+        <svg class="mao" viewBox="0 0 80 60" aria-hidden="true">
+          <ellipse cx="46" cy="14" rx="11" ry="7" fill="#5aa4f2"/>
+          <ellipse cx="46" cy="13" rx="6" ry="3.5" fill="#f5a623"/>
+          <path d="M6 38c8-2 14-6 20-6h14c3 0 4 4 1 5l-12 3 24-3c4-1 12-7 14-6s0 3-2 5c-8 8-18 12-30 12-10 0-16-3-22-4z" fill="#fff"/>
+        </svg>
+        <p class="fecho-titulo">Não é só acessibilidade. É <span class="laranja">autonomia, dignidade e inclusão digital.</span></p>
+        <p class="obrigado">Faça parte dessa mudança.</p>
+
+        <form class="contato" id="contatoForm" novalidate>
+          <label>Seu nome
+            <input type="text" id="nome" autocomplete="name">
+          </label>
+          <label>Seu e-mail
+            <input type="email" id="email" autocomplete="email">
+          </label>
+          <label>Eu sou
+            <select id="perfil">
+              <option value="pessoa">Pessoa ou familiar</option>
+              <option value="empresa">Empresa</option>
+              <option value="investidor">Investidor</option>
+              <option value="outro">Outro</option>
+            </select>
+          </label>
+          <button type="submit" class="botao">Quero acompanhar o projeto</button>
+          <p class="retorno" id="retorno" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <p>Autonomia Digital para Todos</p>
+  </footer>
+
+  <a href="#demo" class="flutuante" id="flutuante" aria-label="Experimentar o assistente"><svg><use href="#mic"/></svg></a>
+
+  <script src="script.js"></script>
+</body>
+</html>
