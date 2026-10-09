@@ -1,21 +1,21 @@
 const reduzMovimento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
+ 
 function formatar(valor, casas) {
   return valor.toFixed(casas).replace(".", ",");
 }
-
+ 
 function contar(el) {
   const alvo = parseFloat(el.dataset.alvo);
   const casas = parseInt(el.dataset.casas || "0", 10);
-
+ 
   if (reduzMovimento) {
     el.textContent = formatar(alvo, casas);
     return;
   }
-
+ 
   const duracao = 1400;
   const inicio = performance.now();
-
+ 
   function passo(agora) {
     const progresso = Math.min((agora - inicio) / duracao, 1);
     const suave = 1 - Math.pow(1 - progresso, 3);
@@ -24,11 +24,11 @@ function contar(el) {
   }
   requestAnimationFrame(passo);
 }
-
+ 
 function preencherBarra(barra) {
   barra.querySelector(".trilho span").style.width = barra.dataset.valor + "%";
 }
-
+ 
 const observador = new IntersectionObserver((entradas) => {
   entradas.forEach((entrada) => {
     if (!entrada.isIntersecting) return;
@@ -38,11 +38,11 @@ const observador = new IntersectionObserver((entradas) => {
     observador.unobserve(el);
   });
 }, { threshold: 0.4 });
-
+ 
 document.querySelectorAll(".contar, .barra").forEach((el) => observador.observe(el));
-
+ 
 const mensagens = document.querySelectorAll("#conversa .msg");
-
+ 
 function mostrarConversa() {
   if (reduzMovimento) {
     mensagens.forEach((m) => m.classList.add("visivel"));
@@ -53,7 +53,7 @@ function mostrarConversa() {
   });
 }
 mostrarConversa();
-
+ 
 const exemplos = [
   {
     comando: "Quero transferir R$100 para o CPF 123.456.789-10",
@@ -83,17 +83,17 @@ const exemplos = [
     ]
   }
 ];
-
+ 
 const campo = document.getElementById("comando");
 const micBtn = document.getElementById("micBtn");
 const form = document.getElementById("demoForm");
 const listaPassos = document.getElementById("passos");
 const abas = document.querySelectorAll(".aba");
-
+ 
 let atual = 0;
 let temporizadores = [];
 let digitando = null;
-
+ 
 function limpar() {
   temporizadores.forEach(clearTimeout);
   temporizadores = [];
@@ -102,7 +102,7 @@ function limpar() {
   campo.placeholder = "";
   listaPassos.querySelectorAll("li").forEach((li) => li.classList.remove("ativo"));
 }
-
+ 
 function montarPassos() {
   listaPassos.innerHTML = "";
   exemplos[atual].passos.forEach((texto, i, todos) => {
@@ -112,7 +112,7 @@ function montarPassos() {
     listaPassos.appendChild(li);
   });
 }
-
+ 
 function executar() {
   limpar();
   listaPassos.querySelectorAll("li").forEach((li, i) => {
@@ -120,7 +120,7 @@ function executar() {
     temporizadores.push(setTimeout(() => li.classList.add("ativo"), espera));
   });
 }
-
+ 
 function escolher(i) {
   atual = i;
   limpar();
@@ -131,11 +131,11 @@ function escolher(i) {
   campo.value = exemplos[i].comando;
   montarPassos();
 }
-
+ 
 abas.forEach((aba) => {
   aba.addEventListener("click", () => escolher(parseInt(aba.dataset.i, 10)));
 });
-
+ 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   if (campo.value.trim() === "") {
@@ -144,13 +144,13 @@ form.addEventListener("submit", (e) => {
   }
   executar();
 });
-
+ 
 micBtn.addEventListener("click", () => {
   limpar();
   campo.value = "";
   micBtn.classList.add("ouvindo");
   campo.placeholder = "Ouvindo...";
-
+ 
   const texto = exemplos[atual].comando;
   let i = 0;
   digitando = setInterval(() => {
@@ -163,34 +163,34 @@ micBtn.addEventListener("click", () => {
     }
   }, reduzMovimento ? 0 : 35);
 });
-
+ 
 escolher(0);
-
+ 
 const flutuante = document.getElementById("flutuante");
 const demo = document.getElementById("demo");
-
+ 
 new IntersectionObserver(([entrada]) => {
   flutuante.style.display = entrada.isIntersecting ? "none" : "grid";
 }, { threshold: 0.3 }).observe(demo);
-
+ 
 const contato = document.getElementById("contatoForm");
 const nome = document.getElementById("nome");
 const email = document.getElementById("email");
 const retorno = document.getElementById("retorno");
-
+ 
 contato.addEventListener("submit", (e) => {
   e.preventDefault();
   const nomeOk = nome.value.trim().length > 1;
   const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
-
+ 
   nome.classList.toggle("erro", !nomeOk);
   email.classList.toggle("erro", !emailOk);
-
+ 
   if (!nomeOk || !emailOk) {
     retorno.textContent = "Preencha seu nome e um e-mail válido.";
     return;
   }
-
+ 
   const primeiroNome = nome.value.trim().split(" ")[0];
   retorno.textContent = "Obrigado, " + primeiroNome + "! Vamos manter você por dentro do projeto.";
   contato.reset();
